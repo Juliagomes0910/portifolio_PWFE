@@ -1,0 +1,207 @@
+/* Documento CSS */
+
+/* CSS Reset*/
+/* O CSS Reset é um conjunto de estilos aplicados a todos os elementos do documento para remover as margens, preenchimentos e garantir que a caixa de modelo seja calculada corretamente com a propriedade box-sizing: border-box. */
+*{
+    margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* instalação de fontes locais */
+/* Aqui são definidas duas fontes personalizadas (fontes locais) chamadas "Archive" e "Dosis" usando a regra @font-face. Essas fontes serão usadas em diferentes partes do documento através das classes .fonte1 e .fonte2. Essas fontes estão em uma pasta chamada 'fonts' na pasta do projeto */
+@font-face {
+    font-family: 'Archive';
+    src: url('fonts/archive_antiqua.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Dosis';
+    src: url('fonts/dosis.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.fonte1{
+    font-family: 'Archive','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+.fonte2{
+    font-family: 'Dosis','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Propriedades gerais */
+/* Aqui são definidas as propriedades gerais para o corpo do documento (body). Define-se o fundo (background-color), cor do texto (color), fonte (font-family) e tamanho da fonte (font-size) que serão aplicados a todo o documento. Além disso, são definidas estilos de cabeçalho (h1, h2, h3 e h4) e parágrafos (p) com tamanhos de fonte e margens específicas. A classe 'divisor' servirá para destacar o texto utilizado no início de cada setor (logotipo, cores, fontes e aplicabilidade */
+body{
+    background-color: #12370F;
+    color:#D8C690;
+    font-family: 'Segoe UI';
+    font-size: 14pt;
+}
+
+/* Propriedades de textos */
+/* Aqui são definidas algumas propriedades para os cabeçalhos de h1 até h4 e o parágrafo. É definido uma classe cahamada divisor para ser aplicada em alguns títulos */
+
+h1{
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 3em;
+    margin-bottom: 8px;
+}
+
+h3{
+    font-size: 2em;
+    margin-bottom: 6px;
+}
+
+h4{
+    font-size: 2em;
+    margin-bottom: 4px;
+}
+
+p{
+    font-size: 1.5em;
+    margin-bottom: 2px;
+    line-height: 1.5em;
+}
+
+.divisor{
+    text-align: left;
+    border-bottom: 2px solid #D8C690;
+}
+
+.center{
+    text-align: center;    
+}
+
+/* Propriedades do cabeçalho  */
+/* Essa seção define os estilos para o cabeçalho (header) do documento. Ele utiliza a propriedade display: flex para organizar os elementos do cabeçalho em um layout flexível. Os elementos do menu são estilizados através da classe .menu e as listas não possuem marcadores com list-style: none. Os itens do menu (nav ul li) têm display: inline-block, espaçamento (padding) e borda direita (border-right) para separá-los. O último item do menu é estilizado com li:last-child para remover a borda direita. */
+    header{
+        display: flex; 
+        width: 100%;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 0 5%;
+    }
+
+    nav ul{
+        list-style: none;
+    }
+
+    nav ul li{
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 2em;
+        border-right: #D8C690 2px solid;
+        transition: margin-left 4s ease-in-out 1s;
+    }
+
+    nav ul li:hover{
+        font-size: 2.2em; /* Aumentando o tamanho da fonte */
+        color: #fff; /* Mudando a cor do texto */
+        background-color: #1d5a18; /* Mudando a cor de fundo */
+    }
+    
+    /* O último elemento não terá borda graças a propriedade last-child que faz com que a regra seja aplicada somente no último elemento*/
+    nav ul li:last-child{
+        border:0;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color:#D8C690;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover{
+        text-decoration: none;
+        color:#948046;
+        scale: 120%;
+    }
+
+    nav ul li a:visited{
+        text-decoration: none;
+    }
+
+/* Propriedades do corpo */
+/* Aqui, encontramos estilos para o conteúdo principal do documento (main). A largura do conteúdo é definida como 95% e margin: auto é usado para centralizá-lo na página. */
+main{
+    width: 100%;
+    margin: auto;
+}
+
+#aplicabilidade .grid_fotos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#aplicabilidade .grid_fotos .apl{
+    max-width: 31%;
+    margin: 1%;
+}
+
+#aplicabilidade .grid_fotos .apl img{
+    width: 100%;
+}
+
+/* Propriedades do rodapé */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+}
+
+/* framework */
+.linha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1% 0;
+    width: 100%;
+}
+
+.cl-33{
+    width: 33%;
+    padding: 1%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cl-50{
+    width:50%;
+    padding: 1%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.cl-66{
+    width: 66%;
+    padding: 1%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha img{
+    width: 100%;
+}
+
+.box200{
+    height: 200px;
+
+}
+
+.box400{
+    height: 400px;
+}
+

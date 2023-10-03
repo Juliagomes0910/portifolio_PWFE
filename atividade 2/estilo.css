@@ -1,0 +1,89 @@
+/* DOCUMENTO CSS */
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Dosis:wght@200&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid #f00; */
+}
+
+header {
+    height: 80px;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+header h1{
+    font-size: 3em;
+    font-family: 'caprasimo', sans-serif;
+    color: #f3ca4c ;
+}
+main{
+	height: 670px;
+	
+}
+.Linha{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 80%;
+}
+.cl25{
+    margin-top: 4%;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+    border-right: 3px #000 solid;
+}
+.cl25:last-child{
+    border:0;
+}
+.cl25 figure{
+    width: 100%;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+}
+.cl25 img{
+    height: auto;
+    width: 100%;
+    transition: 0.3s cubic-bezier(0.175, 0,885,0.32,1.275);
+}
+.cl25 img:hover{
+    transform: scale(1.1);
+    -webkit-text-stroke: 2px transparent;
+}
+.cl25 h3{
+    font-size: 2em;
+    margin-bottom: 2%
+}
+.cl25 p{
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+footer {
+	width:100%;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .cl25 {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cl25{
+        width: 100%;
+        margin:0
+    }
+}

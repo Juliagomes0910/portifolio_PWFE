@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH MASTER</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 150px;
+            border: 4px solid #FF8314;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img{
+            margin-right: 2em;
+            width: 30%;
+            margin-left: 50%;
+        }
+        header nav li{
+            display: inline;
+            margin-right: 3em;
+        }
+        header nav li a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <script>
+        function mudaFoto(item){
+            
+            document.getElementById("icone").src= item
+        }
+    
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="1.png" id="icone" >
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" onmousemove="mudaFoto('3.png')" onmouseout="mudaFoto('1.png')">Principal</a></li>
+                <li><a href="#" onmousemove="mudaFoto('6.png')" onmouseout="mudaFoto('1.png')">Computadores</a></li>
+                <li><a href="#" onmousemove="mudaFoto('4.png')" onmouseout="mudaFoto('1.png')">Vídeo Games</a></li>
+                <li><a href="#" onmousemove="mudaFoto('5.png')" onmouseout="mudaFoto('1.png')">Celulares</a></li>
+                <li><a href="#" onmousemove="mudaFoto('7.png')" onmouseout="mudaFoto('1.png')">Contato</a></li>
+                <li><a href="#" onmousemove="mudaFoto('2.png')" onmouseout="mudaFoto('1.png')">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
